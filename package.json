@@ -1,0 +1,30 @@
+{
+	"name": "lb-useget",
+	"version": "1.0.3",
+	"description": "",
+	"main": "dist/bundle.js",
+	"author": "",
+	"license": "ISC",
+	"files": [
+		"dist/*"
+	],
+	"scripts": {
+		"build": "npx babel useGet.js --out-file dist/bundle.js && uglifyjs dist/bundle.js -o dist/bundle.js -c -m",
+		"deploy": "npm run build && npm publish"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"@babel/preset-react": "^7.9.4",
+		"gh-pages": "^2.2.0",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"uglify-js": "^3.6.8"
+	},
+	"peerDependencies": {
+		"react": "^16.x",
+		"react-dom": "^16.x"
+	},
+	"dependencies": {}
+}
